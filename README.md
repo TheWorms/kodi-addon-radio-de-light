@@ -1,54 +1,52 @@
-# Radio — interface française
+**English** · [Français](readme.fr.md)
 
-Module Kodi pour écouter des **flux radio en streaming**, avec une interface **en français**.
+# Radio
 
-Le module s'**inspire du service [radio.de](https://www.radio.de)** et s'appuie sur son API
-publique `prod.radio-api.net`. L'interface est portée sur le système de localisation standard
-de Kodi (gettext / fichiers `.po`) et propose une vue « cinéma » pendant la lecture.
+Kodi add-on to listen to **radio streams**, with a localized interface.
 
-## Crédits
-
-- **Code d'origine :** [Publish3r](https://github.com/Publish3r) — le module dont ce projet est dérivé.
-- **Source d'origine :** <https://github.com/Publish3r/repository.kodi.matrix>
-- **Adaptation française, corrections, vue cinéma :** [TheWorms](https://github.com/TheWorms).
-- **Inspiration :** le service radio.de.
-
-Ce projet est dérivé d'un module sous licence GPL v2 ; le crédit à l'auteur d'origine et la
-licence sont conservés conformément à cette licence.
-
-## Fonctionnalités
-
-- **Stations de votre région** — stations populaires localisées (privilégie la France).
-- **Rechercher une station** — recherche par nom.
-- **Mes stations** — favoris, avec ajout/retrait via le menu contextuel.
-- **Vue cinéma** — pendant la lecture, logo de la station en plein écran avec une barre
-  d'égaliseur animée (activable/désactivable dans les réglages).
+It is **inspired by the [radio.de](https://www.radio.de) service** and relies on its
+public API `prod.radio-api.net`. The interface uses Kodi's standard localization system
+(gettext / `.po` files) and offers a "cinema" view during playback.
 
 ## Installation
 
-1. Télécharger le fichier `plugin.audio.radio-<version>.zip` depuis la page
-   [Releases](../../releases) de ce dépôt.
-2. Dans Kodi : **Modules → Installer depuis un fichier zip** → sélectionner le zip.
+**Recommended — TheWorms repository** (automatic updates).
 
-> Le module dépend de `script.module.requests` (généralement déjà présent sur CoreELEC / LibreELEC).
+Download the repository by clicking **[HERE](https://raw.githubusercontent.com/TheWorms/kodi-repo/main/zips/repository.theworms/repository.theworms.zip)**, then in Kodi:
 
-## Structure du dépôt
+1. **Add-ons** → **Install from zip file** → select the downloaded zip
+   *(if Kodi blocks it, enable **Unknown sources** under Settings → Add-ons)*
+2. **Install from repository** → **TheWorms Repository** → pick the add-on
+3. Updates will then be automatic
 
-```
-plugin.audio.radio/            le module Kodi installable
-├── addon.py
-├── addon.xml
-├── changelog.txt
-├── LICENSE.txt
-└── resources/
-    ├── settings.xml           réglages (vue cinéma, barre)
-    ├── language/              traductions gettext (fr_FR, en_GB, de_DE)
-    └── skins/Default/         fenêtre plein écran de la vue cinéma
-```
+**Manual install (alternative):** download the add-on zip from the [Releases](../../releases) page, then **Add-ons** → **Install from zip file**.
 
-## Localisation
+## Credits
 
-Pour modifier ou compléter les traductions, éditer les fichiers :
+- **Original code:** [Publish3r](https://github.com/Publish3r) — the add-on this project is derived from.
+- **Original source:** <https://github.com/Publish3r/repository.kodi.matrix>
+- **French adaptation, fixes, cinema view:** [TheWorms](https://github.com/TheWorms).
+- **Inspiration:** the radio.de service.
+
+This project is derived from a GPL v2 add-on; credit to the original author and the
+license are preserved in accordance with that license.
+
+## Features
+
+- **Stations from your region** — localized popular stations.
+- **Search a station** — search by name.
+- **My stations** — favorites, add/remove via the context menu.
+- **Cinema view** — during playback, full-screen station logo with an animated
+  equalizer bar (toggle in settings).
+
+## Manual installation
+
+The add-on is also available in the repository's add-on list. It depends on
+`script.module.requests` (usually already present on CoreELEC / LibreELEC).
+
+## Localization
+
+Translations live in:
 
 ```
 plugin.audio.radio/resources/language/resource.language.fr_fr/strings.po
@@ -56,7 +54,7 @@ plugin.audio.radio/resources/language/resource.language.en_gb/strings.po
 plugin.audio.radio/resources/language/resource.language.de_de/strings.po
 ```
 
-## Licence
+## License
 
-GPL v2 — voir [`plugin.audio.radio/LICENSE.txt`](plugin.audio.radio/LICENSE.txt),
-identique à la licence du module d'origine.
+GPL v2 — see [`plugin.audio.radio/LICENSE.txt`](plugin.audio.radio/LICENSE.txt),
+identical to the original add-on's license.
